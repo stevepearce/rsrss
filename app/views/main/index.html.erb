@@ -1,0 +1,39 @@
+<div class='row'>
+  <div class='left-col'>
+    <ul>
+      <% @feeds.each do |feed| %>
+        <li>
+          <%= link_to feed.name, "/?feed=#{feed.id}" %>
+        </li>
+      <% end %>
+      <li>
+        <%= render 'feeds/form' %>
+      </li>
+    </ul>
+  </div>
+  <div class='main-col'>
+    <h1><%= @feed.name %></h1>
+    <ul>
+      <% @entries.each do |entry| %>
+        <li>
+          <div class='row'>
+            <div class='image'>
+              <img src="<%= entry.image %>"</img>
+            </div>
+            <div class='content'>
+              <%= link_to raw(entry.title), entry.url, class: 'title', target: :_blank %>
+              <% if entry.published %>
+                <div class='published'>
+                  <%= entry.published.strftime('%B %-d, %I:%M') %>
+                </div>
+              <% end %>
+              <div class='summary'>
+                <%= entry.summary %>
+              </div>
+            </div>
+          </div>
+        </li>
+      <% end %>	
+    </ul>
+  </div>
+</div>

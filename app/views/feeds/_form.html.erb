@@ -1,0 +1,16 @@
+<h3>Add feed</h3>
+<% feed = Feed.new unless local_assigns.has_key? :feed %>
+<%= form_for feed do |f| %>
+  <div class='row'>
+    <div class='label-col'>
+      <%= f.label :name, 'Name' %>
+      <%= f.label :url, 'URL' %>
+    </div>
+    <div class='field-col'>
+      <%= f.text_field :name %>
+      <%= f.text_field :url %>
+    </div>
+    <%= f.submit 'Submit' %>
+  </div>
+<% end %>
+

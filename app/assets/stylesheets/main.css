@@ -1,0 +1,73 @@
+body {
+  font-family: Open Sans;
+  font-size: 12pt;
+}
+a {
+  text-decoration: none;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.left-col {
+  width: 300px;
+  padding: 15px;
+  float:left;
+  border: 1px solid #dedede;
+  margin-right: 15px;
+}
+.main-col {
+  margin-left: 347px;
+  padding: 15px;
+  border: 1px solid #dedede;
+}
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+ul > li:not(:last-child) {
+  margin-bottom: 15px;
+}
+ul > li {
+  display: inline-block;
+}
+.image {
+  width: 90px;
+  float: left;
+  margin-right: 15px;
+}
+.image img {
+  width: 90px;
+}
+.content {
+  margin-left: 105px; 
+}
+.title {
+  font-size: 14pt;
+}
+.summary {
+  color: #333;
+}
+.published {
+  font-size: smaller;
+  color: #777;
+}
+h1 {
+  margin-top: 0px;
+}
+.label-col {
+  float:left;
+}
+.label-col label {
+  display:block;
+  padding: 5px;
+}
+.field-col {
+  margin-left:70px;
+}
+.field-col input {
+  padding: 5px;
+  margin: 3px;
+}
